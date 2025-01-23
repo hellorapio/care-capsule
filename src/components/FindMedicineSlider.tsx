@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import Image from "next/image";
 interface Slide {
   title: string;
     description: string;
@@ -42,10 +42,12 @@ const FindMedicineSlider: React.FC<SliderProps> = ({ slides }) => {
       </div>
 
       <div className="w-1/2 flex justify-center">
-        <img
+        <Image
           src={slides[currentSlide].imageUrl}
           alt={slides[currentSlide].title}
           className="w-3/4 h-auto"
+          width={ 576}
+          height={570}
         />
       </div>
 

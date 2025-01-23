@@ -2,6 +2,7 @@
 import { FaSearch, FaShoppingCart, FaUser, FaGlobe } from "react-icons/fa"; 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -19,7 +20,13 @@ const Navbar: React.FC = () => {
           <div className="container mx-auto flex items-center justify-between px-7 pl-40 pr-40">
             {/* logo*/}
             <Link href="/">
-              <img src="/logo.png" alt="Logo" className="w-20 cursor-pointer" />
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                className="w-20 cursor-pointer"
+                width={144}
+                height={46}
+              />
             </Link>
 
             {/* pages*/}
