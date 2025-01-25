@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-800"
+              className="text-[#2BADE8] hover:text-blue-800"
             >
               <FaFacebookF className="w-6 h-7" />
             </Link>
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-800"
+              className="text-[#2BADE8] hover:text-blue-800"
             >
               <FaTwitter className="w-6 h-7" />
             </Link>
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-800"
+              className="text-[#2BADE8] hover:text-blue-800"
             >
               <FaInstagram className="w-6 h-7" />
             </Link>
@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
-              className=" w-full px-4 py-2 border border-gray-100 shadow-lg  rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className=" w-full px-4 py-2 border border-gray-100 shadow-lg text-black  rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-600"
               required
             />
             <button

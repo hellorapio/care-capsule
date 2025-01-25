@@ -27,13 +27,13 @@ const FindMedicineSlider: React.FC<SliderProps> = ({ slides }) => {
   return (
     <div className="relative w-full max-w-8xl mx-auto p-6 pt-40 pb-20 bg-white mt-3 mb-4 flex items-center">
       <div className="w-1/2 pl-10">
-        <h2 className="text-4xl font-bold text-[#2BADE8]">
+        <h2 className="text-5xl font-bold text-[#2BADE8]">
           {slides[currentSlide].title}
         </h2>
-        <p className="text-gray-600 text-2xl w-[77%] mt-4">
+        <p className="text-gray-600 text-2xl w-[95%] mt-4">
           {slides[currentSlide].description}
         </p>
-        <p className="text-gray-400 w-[75%] mt-4">
+        <p className="text-gray-400 w-[81%] mt-4">
           {slides[currentSlide].info}
         </p>
         <button className="mt-6 px-6 py-2 bg-[#2BADE8] text-white rounded-full shadow hover:bg-blue-700">
@@ -74,6 +74,7 @@ const FindMedicineSlider: React.FC<SliderProps> = ({ slides }) => {
         onClick={() => handleSlideChange("right")}
         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-blue-100 text-black p-2 rounded-full shadow hover:bg-blue-200"
       >
+        
         &gt;
       </button>
     </div>

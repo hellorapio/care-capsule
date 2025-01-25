@@ -1,4 +1,3 @@
-
 import Navbar from "../components/Navbar";
 import FindMedicineSlider from "../components/FindMedicineSlider";
 import Title from "../components/Title";
@@ -211,6 +210,14 @@ const Home: React.FC = () => {
           distance="2.6 KM"
           rating={3.3}
           reviews={200}
+        />
+        <Pharmacy
+          image="/العزبي.png"
+          name="Ezaby Pharmacy"
+          address="10 Saeed Street, El-Bahr District, Tanta"
+          distance="3.0 KM"
+          rating={3.5}
+          reviews={270}
         />
       </div>
       <Wrapper backgroundClass="bg-gray-100">

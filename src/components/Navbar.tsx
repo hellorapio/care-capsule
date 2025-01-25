@@ -33,22 +33,22 @@ const Navbar: React.FC = () => {
             <ul className="flex space-x-8 text-gray-600 font-medium">
               <li>
                 <Link href="/">
-                  <p className="text-[#2BADE8] hover:text-blue-600">Home</p>
+                  <p className=" hover:text-blue-400">Home</p>
                 </Link>
               </li>
               <li>
                 <Link href="/pharmacies">
-                  <p className="hover:text-blue-600">Pharmacies</p>
+                  <p className="hover:text-blue-400">Pharmacies</p>
                 </Link>
               </li>
               <li>
                 <Link href="/categories">
-                  <p className="hover:text-blue-600">Categories</p>
+                  <p className="hover:text-blue-400">Categories</p>
                 </Link>
               </li>
               <li>
-                <Link href="/health-articles">
-                  <p className="hover:text-blue-600">Health Articles</p>
+                <Link href="/healthArticles">
+                  <p className="hover:text-blue-400">Health Articles</p>
                 </Link>
               </li>
             </ul>
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
                 />
                 <button
                   type="submit"
-                  className="absolute  px-3 py-2  text-gray-600 rounded-r-md hover:text-blue-600"
+                  className="absolute  px-3 py-2  text-gray-600 rounded-r-md hover:text-blue-400"
                 >
                   <FaSearch className="w-6 h-7" />
                 </button>
@@ -77,12 +77,12 @@ const Navbar: React.FC = () => {
 
               {/* icons*/}
               <Link href="/cart">
-                <p className="text-gray-600 hover:text-blue-600">
+                <p className="text-gray-600 hover:text-blue-400">
                   <FaShoppingCart className="fas fa-shopping-cart text-xl" />
                 </p>
               </Link>
               <Link href="/profile">
-                <p className="text-gray-600 hover:text-blue-600">
+                <p className="text-gray-600 hover:text-blue-400">
                   <FaUser className="fas fa-user text-xl" />
                 </p>
               </Link>
@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
                   onClick={() =>
                     setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
                   }
-                  className="text-gray-600 hover:text-blue-600 focus:outline-none"
+                  className="text-gray-600 hover:text-blue-400 focus:outline-none"
                 >
                   <FaGlobe className="fas fa-globe text-xl" />
                 </button>
