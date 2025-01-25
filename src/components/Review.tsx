@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 interface ReviewProps {
-  imageSrc: string; 
-  text: string; 
-  name: string; 
+  imageSrc: string;
+  text: string;
+  name: string;
 }
 
 const Review = ({ imageSrc, text, name }: ReviewProps) => {
@@ -20,7 +20,9 @@ const Review = ({ imageSrc, text, name }: ReviewProps) => {
       </div>
 
       <div className="mt-9 pl-12">
-        <p className="text-gray-700 italic text-sm mb-6 w-[80%]">"{text}"</p>
+        <p className="text-gray-700 italic text-sm mb-6 w-[80%]">
+          &quot;{text}&quot;
+        </p>
         <h4 className="text-gray-900 font-semibold text-base">{name}</h4>
       </div>
     </div>
