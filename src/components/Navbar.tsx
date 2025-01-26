@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="relative bg-white shadow-md py-4">
+      <nav className="relative bg-white py-4">
         <div className=" lg:flex items-center justify-between px-7 pr-40">
           {/* logo*/}
           <Link href="/">
@@ -119,7 +119,7 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
       <div className="relative mt-0 bg-white">
-        <div className="ml-40  mr-40 h-[2px] bg-gray-500"></div>
+        <div className="ml-20 mr-20 h-[2px] bg-gray-500"></div>
       </div>
     </>
   );

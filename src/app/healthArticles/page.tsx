@@ -103,12 +103,14 @@ const HealthArticles: React.FC = () => {
         {
           id: 501,
           title: "Causes",
-          content: "IntroductionThe common cold is a viral infection that primarily affects the upper respiratory tract, including the nose and throat. It is one of the most widespread illnesses globally, and while it is generally mild, it can cause discomfort and disruption to daily activCauThe common cold is caused by several types of viruses, with rhinoviruses being the most common. These viruses spread through:Airborne droplets from coughing or sneezing.Direct contact with an infected person.Touching contaminated surfaces and then touching the face, particularly the nose or mouth.SymptomsRunny or stuffy noseSneezingSore throatCoughMild headache or body achesFatigueLow-grade fever (less common)",
+          content:
+            "IntroductionThe common cold is a viral infection that primarily affects the upper respiratory tract, including the nose and throat. It is one of the most widespread illnesses globally, and while it is generally mild, it can cause discomfort and disruption to daily activCauThe common cold is caused by several types of viruses, with rhinoviruses being the most common. These viruses spread through:Airborne droplets from coughing or sneezing.Direct contact with an infected person.Touching contaminated surfaces and then touching the face, particularly the nose or mouth.SymptomsRunny or stuffy noseSneezingSore throatCoughMild headache or body achesFatigueLow-grade fever (less common)",
         },
         {
           id: 502,
           title: "Prevention",
-          content: "Wash hands frequently with soap and water.Avoid close contact with infected individuals.Disinfect commonly touched surfaces, such as doorknobs and phones.Maintain a healthy immune system through a balanced diet and regular exercise.TreatmentThere is no specific cure for the common cold, but symptoms can be managed with:Over-the-counter medications: Such as decongestants and pain relievers.Home remedies: Rest, staying hydrated, and using a humidifier.Natural remedies: Honey for sore throats and saline nasal sprays.ConclusionThe common cold is a minor illness but can still affect daily life. Prevention measures and symptom management can help reduce its impact and speed up recovery.",
+          content:
+            "Wash hands frequently with soap and water.Avoid close contact with infected individuals.Disinfect commonly touched surfaces, such as doorknobs and phones.Maintain a healthy immune system through a balanced diet and regular exercise.TreatmentThere is no specific cure for the common cold, but symptoms can be managed with:Over-the-counter medications: Such as decongestants and pain relievers.Home remedies: Rest, staying hydrated, and using a humidifier.Natural remedies: Honey for sore throats and saline nasal sprays.ConclusionThe common cold is a minor illness but can still affect daily life. Prevention measures and symptom management can help reduce its impact and speed up recovery.",
         },
       ],
     },
@@ -119,12 +121,14 @@ const HealthArticles: React.FC = () => {
         {
           id: 601,
           title: "Causes",
-          content: "IntroductionInfluenza, commonly known as the flu, is a contagious respiratory illness caused by influenza viruses. Unlike the common cold, the flu can lead to serious complications, particularly in vulnerable populations such as the elderly, young children, and those with weakened immune systems.CausesThe flu is caused by influenza viruses, mainly types A and B. It spreads through:Respiratory droplets released when an infected person coughs, sneezes, or talks.Contact with contaminated surfaces or objects.SymptomsHigh feverChills and sweatingSevere muscle achesFatigue and weaknessDry, persistent coughSore throatHeadacheRunny or stuffy noseComplicationsIn severe cases, the flu can lead to complications such as:PneumoniaBronchitisSinus or ear infectionsExacerbation of chronic conditions like asthma or diabetes",
+          content:
+            "IntroductionInfluenza, commonly known as the flu, is a contagious respiratory illness caused by influenza viruses. Unlike the common cold, the flu can lead to serious complications, particularly in vulnerable populations such as the elderly, young children, and those with weakened immune systems.CausesThe flu is caused by influenza viruses, mainly types A and B. It spreads through:Respiratory droplets released when an infected person coughs, sneezes, or talks.Contact with contaminated surfaces or objects.SymptomsHigh feverChills and sweatingSevere muscle achesFatigue and weaknessDry, persistent coughSore throatHeadacheRunny or stuffy noseComplicationsIn severe cases, the flu can lead to complications such as:PneumoniaBronchitisSinus or ear infectionsExacerbation of chronic conditions like asthma or diabetes",
         },
         {
           id: 602,
           title: "Prevention",
-          content: "Annual flu vaccination: The most effective way to prevent influenza.Good hygiene: Frequent handwashing and covering the mouth and nose when coughing or sneezing.Avoiding close contact: Especially with infected individuals.TreatmentAntiviral medications: Such as oseltamivir (Tamiflu) and zanamivir (Relenza), which can reduce the severity and duration of symptoms if taken early.Supportive care: Rest, hydration, and over-the-counter medications to relieve symptoms like fever and pain.ConclusionInfluenza is more severe than the common cold, but its impact can be minimized through vaccination, preventive measures, and prompt treatment. Understanding the differences between the flu and the common cold is essential for proper care and management.",
+          content:
+            "Annual flu vaccination: The most effective way to prevent influenza.Good hygiene: Frequent handwashing and covering the mouth and nose when coughing or sneezing.Avoiding close contact: Especially with infected individuals.TreatmentAntiviral medications: Such as oseltamivir (Tamiflu) and zanamivir (Relenza), which can reduce the severity and duration of symptoms if taken early.Supportive care: Rest, hydration, and over-the-counter medications to relieve symptoms like fever and pain.ConclusionInfluenza is more severe than the common cold, but its impact can be minimized through vaccination, preventive measures, and prompt treatment. Understanding the differences between the flu and the common cold is essential for proper care and management.",
         },
       ],
     },
@@ -132,9 +136,9 @@ const HealthArticles: React.FC = () => {
 
   return (
     <>
-      <div>
+      <Wrapper backgroundClass="bg-white">
         <Navbar />
-      </div>
+      </Wrapper>
 
       <Wrapper backgroundClass="bg-gray-100">
         <div className="flex">

@@ -40,9 +40,9 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <div>
+      <Wrapper backgroundClass="bg-white">
         <Navbar />
-      </div>
+      </Wrapper>
       <Wrapper backgroundClass="bg-white">
         <div className="flex items-center justify-center pb-9 bg-white">
           <FindMedicineSlider slides={slides} />

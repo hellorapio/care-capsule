@@ -1,5 +1,4 @@
-
-import Image from "next/image"; 
+import Image from "next/image";
 
 interface NearyouProps {
   image: string;
@@ -15,8 +14,8 @@ const Nearyou: React.FC<NearyouProps> = ({
   buttonText,
 }) => {
   return (
-    <div className="flex  items-center space-x-8 p-6 bg-white  ">
-      <div className="w-1/2 pl-20 ml-10">
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-12 p-6 bg-white  ">
+      <div className=" pl-20 ml-10">
         <Image
           src={image}
           alt="pharmacy near you"
@@ -26,8 +25,8 @@ const Nearyou: React.FC<NearyouProps> = ({
         />
       </div>
 
-      <div className="w-1/2  ">
-        <h2 className=" text-3xl w-[65%] font-bold text-[#2BADE8] mb-5">
+      <div className=" py-6">
+        <h2 className=" text-3xl font-bold text-[#2BADE8] mb-5">
           {title}
         </h2>
         <p className=" text-xl text-gray-700 w-[90%] mb-5">
