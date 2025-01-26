@@ -185,7 +185,7 @@ const Home: React.FC = () => {
           />
         </div>
       </Wrapper>
-      <div className="flex flex-wrap gap-6 justify-center items-center h-screen bg-gray-100">
+      <div className="flex flex-wrap gap-6 justify-center items-center bg-gray-100">
         <Pharmacy
           image="/الطرشوبي.png"
           name="Tarshoby Pharmacy"
@@ -233,7 +233,7 @@ const Home: React.FC = () => {
         </div>
       </Wrapper>
 
-      <div className="p-6 bg-gray-100 ">
+      <div className="p-6 bg-gray-100">
         <WhyChooseUs
           image="/chooseus.png"
           features={[
@@ -279,7 +279,7 @@ const Home: React.FC = () => {
         </div>
       </Wrapper>
       <Wrapper backgroundClass="bg-gray-100">
-        <div className=" p-6 bg-gray-100  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6  ">
+        <div className="p-6 bg-gray-100 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6  ">
           <Article
             image="/covid19.png"
             title="COVID-19 vaccines"
