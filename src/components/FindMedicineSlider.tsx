@@ -3,8 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 interface Slide {
   title: string;
-    description: string;
-    info: string;
+  description: string;
+  info: string;
   buttonText: string;
   imageUrl: string;
 }
@@ -18,19 +18,23 @@ const FindMedicineSlider: React.FC<SliderProps> = ({ slides }) => {
 
   const handleSlideChange = (direction: "left" | "right") => {
     if (direction === "left") {
-      setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+      setCurrentSlide((prev) =>
+        prev === 0 ? slides.length - 1 : prev - 1
+      );
     } else {
-      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+      setCurrentSlide((prev) =>
+        prev === slides.length - 1 ? 0 : prev + 1
+      );
     }
   };
 
   return (
-    <div className="relative w-full max-w-8xl mx-auto p-6 pt-40 pb-20 bg-white mt-3 mb-4 flex items-center">
-      <div className="w-1/2 pl-10">
-        <h2 className="text-5xl font-bold text-[#2BADE8]">
+    <div className="relative w-full max-w-8xl mx-auto p-6 pt-40 pb-20 bg-white mt-3 mb-4 flex flex-col gap-4 lg:flex-row items-center">
+      <div className="lg:w-1/2 pl-10">
+        <h2 className="lg:text-5xl text-2xl font-bold text-[#2BADE8]">
           {slides[currentSlide].title}
         </h2>
-        <p className="text-gray-600 text-2xl w-[95%] mt-4">
+        <p className="text-gray-600 lg:text-2xl text-base mt-4">
           {slides[currentSlide].description}
         </p>
         <p className="text-gray-400 w-[81%] mt-4">
@@ -41,12 +45,12 @@ const FindMedicineSlider: React.FC<SliderProps> = ({ slides }) => {
         </button>
       </div>
 
-      <div className="w-1/2 flex justify-center">
+      <div className="lg:w-1/2 flex justify-center">
         <Image
           src={slides[currentSlide].imageUrl}
           alt={slides[currentSlide].title}
           className="w-3/4 h-auto"
-          width={ 576}
+          width={576}
           height={570}
         />
       </div>
@@ -74,7 +78,6 @@ const FindMedicineSlider: React.FC<SliderProps> = ({ slides }) => {
         onClick={() => handleSlideChange("right")}
         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-blue-100 text-black p-2 rounded-full shadow hover:bg-blue-200"
       >
-        
         &gt;
       </button>
     </div>

@@ -38,8 +38,6 @@ const Home: React.FC = () => {
     },
   ];
 
-  
-
   return (
     <>
       <div>
@@ -108,27 +106,31 @@ const Home: React.FC = () => {
           />
         </div>
       </Wrapper>
-      <div className="flex flex-wrap gap-1 justify-center items-center  bg-gray-100">
-        <Medicine
-          image="/Antinal.png"
-          name="Antinal 200 mg-24 capsules"
-          price="EGP 60.00"
-        />
-        <Medicine
-          image="/Panadol.png"
-          name="Antinal 200 mg-24 capsules"
-          price="EGP 60.00"
-        />
-        <Medicine
-          image="/prufen.png"
-          name="Brufen 600 mg - 30 Tablet"
-          price="EGP 98.00"
-        />
-        <Medicine
-          image="/cetal.png"
-          name="Cetal 500mg 20 tablets "
-          price="EGP 80.00"
-        />
+      <div className="bg-gray-100">
+        <Wrapper>
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-1 justify-center items-center  bg-gray-100">
+            <Medicine
+              image="/Antinal.png"
+              name="Antinal 200 mg-24 capsules"
+              price="EGP 60.00"
+            />
+            <Medicine
+              image="/Panadol.png"
+              name="Antinal 200 mg-24 capsules"
+              price="EGP 60.00"
+            />
+            <Medicine
+              image="/prufen.png"
+              name="Brufen 600 mg - 30 Tablet"
+              price="EGP 98.00"
+            />
+            <Medicine
+              image="/cetal.png"
+              name="Cetal 500mg 20 tablets "
+              price="EGP 80.00"
+            />
+          </div>
+        </Wrapper>
       </div>
 
       <Wrapper backgroundClass="bg-gray-100">
@@ -144,29 +146,32 @@ const Home: React.FC = () => {
           />
         </div>
       </Wrapper>
-      <div className="flex flex-wrap gap-1 justify-center items-center  bg-gray-100">
-        <Medicine
-          image="/rawafrican.png"
-          name="Raw African Follicle Booster Oil"
-          price="EGP 180.00"
-        />
-        <Medicine
-          image="/cosrx.png"
-          name="COSRX Advanced Snail 96"
-          price="EGP 1197.00"
-        />
-        <Medicine
-          image="/garniee.png"
-          name="Garnier pure micellar deals"
-          price="EGP 200.00"
-        />
-        <Medicine
-          image="/besline.png"
-          name="Beesline Natural Whitening Roll-On  "
-          price="EGP 250.00"
-        />
+      <div className="bg-gray-100">
+        <Wrapper>
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-1 justify-center items-center  bg-gray-100">
+            <Medicine
+              image="/rawafrican.png"
+              name="Raw African Follicle Booster Oil"
+              price="EGP 180.00"
+            />
+            <Medicine
+              image="/cosrx.png"
+              name="COSRX Advanced Snail 96"
+              price="EGP 1197.00"
+            />
+            <Medicine
+              image="/garniee.png"
+              name="Garnier pure micellar deals"
+              price="EGP 200.00"
+            />
+            <Medicine
+              image="/besline.png"
+              name="Beesline Natural Whitening Roll-On  "
+              price="EGP 250.00"
+            />
+          </div>
+        </Wrapper>
       </div>
-
       <Wrapper backgroundClass="bg-gray-100">
         <div className="bg-gray-100 pt-8 ">
           <Title
