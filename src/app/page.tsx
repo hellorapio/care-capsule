@@ -10,7 +10,7 @@ import Article from "../components/Article";
 import Footer from "../components/Footer";
 import Wrapper from "../components/Wrapper";
 
-const Home: React.FC = () => {
+const Home: React.FC = async () => {
   const slides = [
     {
       title: "Find Medicines",
@@ -38,6 +38,25 @@ const Home: React.FC = () => {
     },
   ];
 
+  const medicines = await fetch(
+    process.env.NEXT_PUBLIC_API_URL +
+      "/medicines?category=medicine&limit=8&page=8"
+  );
+  const parsed = await medicines.json();
+  const meds = parsed.data.data;
+
+  const care = await fetch(
+    process.env.NEXT_PUBLIC_API_URL +
+      "/medicines?category=care&limit=8&page=8"
+  );
+  const parsed2 = await care.json();
+  const cares = parsed2.data.data;
+
+  const pharmaciesRes = await fetch(
+    process.env.NEXT_PUBLIC_API_URL + "/pharmacies?limit=5"
+  );
+
+  const parsePharmas = (await pharmaciesRes.json()).data.data;
   return (
     <>
       <Wrapper backgroundClass="bg-white">
@@ -109,26 +128,15 @@ const Home: React.FC = () => {
       <div className="bg-gray-100">
         <Wrapper>
           <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-1 justify-center items-center  bg-gray-100">
-            <Medicine
-              image="/Antinal.png"
-              name="Antinal 200 mg-24 capsules"
-              price="EGP 60.00"
-            />
-            <Medicine
-              image="/Panadol.png"
-              name="Antinal 200 mg-24 capsules"
-              price="EGP 60.00"
-            />
-            <Medicine
-              image="/prufen.png"
-              name="Brufen 600 mg - 30 Tablet"
-              price="EGP 98.00"
-            />
-            <Medicine
-              image="/cetal.png"
-              name="Cetal 500mg 20 tablets "
-              price="EGP 80.00"
-            />
+            {meds.map((med) => (
+              <Medicine
+                id={med.id}
+                key={med.id}
+                image={med.image}
+                name={med.name}
+                price={med.price}
+              />
+            ))}
           </div>
         </Wrapper>
       </div>
@@ -149,26 +157,15 @@ const Home: React.FC = () => {
       <div className="bg-gray-100">
         <Wrapper>
           <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-1 justify-center items-center  bg-gray-100">
-            <Medicine
-              image="/rawafrican.png"
-              name="Raw African Follicle Booster Oil"
-              price="EGP 180.00"
-            />
-            <Medicine
-              image="/cosrx.png"
-              name="COSRX Advanced Snail 96"
-              price="EGP 1197.00"
-            />
-            <Medicine
-              image="/garniee.png"
-              name="Garnier pure micellar deals"
-              price="EGP 200.00"
-            />
-            <Medicine
-              image="/besline.png"
-              name="Beesline Natural Whitening Roll-On  "
-              price="EGP 250.00"
-            />
+            {cares.map((med) => (
+              <Medicine
+                id={med.id}
+                key={med.id}
+                image={med.image}
+                name={med.name}
+                price={med.price}
+              />
+            ))}
           </div>
         </Wrapper>
       </div>
@@ -186,46 +183,20 @@ const Home: React.FC = () => {
         </div>
       </Wrapper>
       <div className="flex flex-wrap gap-6 justify-center items-center bg-gray-100">
-        <Pharmacy
-          image="/الطرشوبي.png"
-          name="Tarshoby Pharmacy"
-          address="15 El-Bahr Street, Near Tarshoby Square, Tanta"
-          distance="1.3 KM"
-          rating={3.5}
-          reviews={200}
-        />
-        <Pharmacy
-          image="/Fouda.png"
-          name="Fouda Pharmacy"
-          address="12 saeed Street, ElBahr District, Tanta"
-          distance="1.7 KM"
-          rating={3.5}
-          reviews={200}
-        />
-        <Pharmacy
-          image="/zikry.png"
-          name="Zikry Pharmacy"
-          address="89 El-Azhar Street, El-Horreya Area, Tanta"
-          distance="2.1 KM"
-          rating={4.0}
-          reviews={109}
-        />
-        <Pharmacy
-          image="/الاجزخانة.png"
-          name="Alajzikhana Pharmacy"
-          address="15 El-Sayed Badawi Street, El-Badawi , Tanta"
-          distance="2.6 KM"
-          rating={3.3}
-          reviews={200}
-        />
-        <Pharmacy
-          image="/العزبي.png"
-          name="Ezaby Pharmacy"
-          address="10 Saeed Street, El-Bahr District, Tanta"
-          distance="3.0 KM"
-          rating={3.5}
-          reviews={270}
-        />
+        {parsePharmas.map((phar) => (
+          <Pharmacy
+            id={phar.id}
+            key={phar.id}
+            address={phar.address}
+            image={
+              "https://www.enigmaglobal.com/wp-content/uploads/2024/01/Costas-Constantopoulos-Pharmacy-4.jpg"
+            }
+            distance="1.7KM"
+            rating={3.7}
+            reviews={312}
+            name={phar.name}
+          />
+        ))}
       </div>
       <Wrapper backgroundClass="bg-gray-100">
         <div className="bg-gray-100 pt-20 ">

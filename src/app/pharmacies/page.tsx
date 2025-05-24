@@ -5,7 +5,12 @@ import Pharmacy from "../../components/Pharmacy";
 import Footer from "../../components/Footer";
 import Nearyou from "../../components/Nearyou";
 
-const pharmacies: React.FC = () => {
+const pharmacies: React.FC = async () => {
+  const pharmaciesRes = await fetch(
+    process.env.NEXT_PUBLIC_API_URL + "/pharmacies?limit=5"
+  );
+
+  const parsePharmas = (await pharmaciesRes.json()).data.data;
   return (
     <>
       <Wrapper backgroundClass="bg-white">
@@ -28,46 +33,20 @@ const pharmacies: React.FC = () => {
       </Wrapper>
 
       <div className="flex flex-wrap gap-6 justify-center items-center bg-gray-100">
-        <Pharmacy
-          image="/الطرشوبي.png"
-          name="Tarshoby Pharmacy"
-          address="15 El-Bahr Street, Near Tarshoby Square, Tanta"
-          distance="1.3 KM"
-          rating={3.5}
-          reviews={200}
-        />
-        <Pharmacy
-          image="/Fouda.png"
-          name="Fouda Pharmacy"
-          address="12 saeed Street, ElBahr District, Tanta"
-          distance="1.7 KM"
-          rating={3.5}
-          reviews={200}
-        />
-        <Pharmacy
-          image="/zikry.png"
-          name="Zikry Pharmacy"
-          address="89 El-Azhar Street, El-Horreya Area, Tanta"
-          distance="2.1 KM"
-          rating={4.0}
-          reviews={109}
-        />
-        <Pharmacy
-          image="/الاجزخانة.png"
-          name="Alajzikhana Pharmacy"
-          address="15 El-Sayed Badawi Street, El-Badawi , Tanta"
-          distance="2.6 KM"
-          rating={3.3}
-          reviews={200}
-        />
-        <Pharmacy
-          image="/العزبي.png"
-          name="Ezaby Pharmacy"
-          address="10 Saeed Street, El-Bahr District, Tanta"
-          distance="3.0 KM"
-          rating={3.5}
-          reviews={270}
-        />
+        {parsePharmas.map((phar) => (
+          <Pharmacy
+            id={phar.id}
+            key={phar.id}
+            address={phar.address}
+            image={
+              "https://www.enigmaglobal.com/wp-content/uploads/2024/01/Costas-Constantopoulos-Pharmacy-4.jpg"
+            }
+            distance="1.7KM"
+            rating={3.7}
+            reviews={312}
+            name={phar.name}
+          />
+        ))}
       </div>
 
       <Wrapper backgroundClass="bg-white">

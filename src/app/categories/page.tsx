@@ -4,22 +4,60 @@ import Offer from "../../components/Offer";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Title from "../../components/Title";
+import Link from "next/link";
+import Image from "next/image";
+
+const CategoryCard = ({
+  title,
+  image,
+  link,
+}: {
+  title: string;
+  image: string;
+  link: string;
+}) => {
+  return (
+    <Link href={link} className="block">
+      <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <div className="relative aspect-video">
+          <Image src={image} alt={title} fill className="object-cover" />
+        </div>
+        <div className="p-6">
+          <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+          <p className="text-gray-600 mt-2">Browse our collection</p>
+        </div>
+      </div>
+    </Link>
+  );
+};
 
 const Categories: React.FC = () => {
   return (
     <>
-      <Wrapper>
+      <Wrapper backgroundClass="bg-white">
         <Navbar />
       </Wrapper>
 
       <Wrapper backgroundClass="bg-gray-100">
-        <div className="bg-gray-100 pt-20 ">
+        <div className="bg-gray-100 py-20 ">
           <Category image="/category.png" text="Categories" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+            <CategoryCard
+              title="Medicines"
+              image="/cetal.png"
+              link="/medicines"
+            />
+            <CategoryCard
+              title="Care Products"
+              image="/cosrx.png"
+              link="/care"
+            />
+          </div>
         </div>
       </Wrapper>
 
-      <Wrapper backgroundClass="bg-gray-100">
-        <div className="bg-gray-100 pt-8 ">
+      <div className="bg-gray-100 pt-8">
+        <Wrapper backgroundClass="bg-gray-100">
           <Title
             image="/execlusive.png"
             text="Exclusive Offers"
@@ -29,8 +67,8 @@ const Categories: React.FC = () => {
               </button>
             }
           />
-        </div>
-      </Wrapper>
+        </Wrapper>
+      </div>
 
       <div className="flex flex-wrap justify-center items-center gap-6 p-6 bg-gray-100 pt-10">
         <Offer
